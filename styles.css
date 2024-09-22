@@ -1,0 +1,172 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards; /* Ajout de l'animation d'apparition */
+}
+
+header {
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.fa-apple {
+  margin-right: 2px;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  transform: translateY(30px); /* Préparation pour l'animation de translation */
+  opacity: 0; /* Invisible au départ */
+  animation: slideIn 2.9s ease-out forwards; /* Animation pour faire apparaître le contenu */
+}
+
+.icon {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  transition: all 1s ease-in-out; /* Transition douce pour les changements */
+}
+
+p {
+  font-size: 0.7rem !important;
+  color: #555;
+  margin-left: 35% !important;
+  margin-right: 35% !important;
+  margin-bottom: 25px;
+  transition: all 1s ease-in-out; /* Transition douce pour les changements */
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  font-size: 0.5rem;
+  border-radius: 60px;
+  margin-top: 50px !important;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; /* Transition douce au hover */
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.learn-more {
+  display: block;
+  margin-top: 30px;
+  font-size: 0.6rem;
+  color: #0071e3;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+.fa-arrow-up {
+  font-size: 10px;
+  rotate: 30deg;
+}
+
+#connect-btn {
+  margin-top: 60px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  p {
+    font-size: 0.7rem !important;
+    margin-left: 100px !important;
+    margin-right: 100px !important;
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    font-size: 0.5rem;
+    border-radius: 60px;
+    margin-top: 50px !important;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out; /* Transition douce au hover */
+  }
+  .learn-more {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 0.5rem;
+  }
+
+  p {
+    font-size: 0.6rem;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  button {
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    margin-top: -20px !important;
+  }
+}
+
+/* Keyframes pour les animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

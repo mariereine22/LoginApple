@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards; /* Animation d'apparition */
+}
+
+header {
+  text-align: left;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fa-apple {
+  margin-right: 2px;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 35px;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(30px); /* Translation pour l'animation */
+  animation: slideIn 2.9s ease-out forwards; /* Animation d'entrée du contenu */
+}
+
+.icon {
+  width: 350px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-left: 30%;
+  margin-right: 30%;
+  transition: all 1s ease-in-out; /* Transition douce */
+}
+
+h4 {
+  color: #747474;
+  margin-top: 25px !important;
+  font-size: 22px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+p {
+  color: #777777ca;
+  margin-top: 10px !important;
+  font-size: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.button-group {
+  margin-top: 5% !important;
+}
+
+button {
+  padding: 10px 25px;
+  border-radius: 60px;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  font-size: 0.5rem;
+  border-radius: 60px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce pour les boutons */
+}
+
+button:hover {
+  transform: scale(1.05); /* Légère augmentation sur le hover */
+}
+
+#cancel-btn {
+  border: none;
+  background: #636363;
+  color: #ffffff;
+}
+
+#submit-btn {
+  border: none;
+  background: #3291ef;
+  color: #ffffff;
+}
+.create-id {
+  display: block;
+  margin-top: 30px;
+  font-size: 0.6rem;
+  color: #0071e3;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* #FFDE59 */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 6%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 0.9rem;
+  }
+
+  .password-toggle img {
+    width: 15px;
+  }
+
+  .container {
+    text-align: center;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 35px !important;
+    margin-left: 8% !important;
+    margin-right: 8% !important;
+    margin-bottom: 15px !important;
+    padding: 20px 10px -50px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+/* Keyframes pour les animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
